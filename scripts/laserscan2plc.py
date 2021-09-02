@@ -17,6 +17,7 @@ def scan_cb(msg):
 
     # now we can do something with the PointCloud2 for example:
     # publish it
+    pc2_msg.header.stamp = rospy.Time()
     pc_pub.publish(pc2_msg)
 
     '''
